@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-teal-950">
     <AppHeader/>
     <slot />
   </div>

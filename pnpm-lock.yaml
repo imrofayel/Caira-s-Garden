@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@iconify-json/hugeicons':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@nuxt/ui':
         specifier: ^2.18.4
         version: 2.18.4(magicast@0.3.5)(rollup@4.21.2)(vite@5.4.3(@types/node@22.5.4)(terser@5.31.6))(vue@3.5.1)
@@ -17,6 +20,10 @@ importers:
       vue:
         specifier: latest
         version: 3.5.1
+    devDependencies:
+      '@iconify-json/lucide':
+        specifier: ^1.2.2
+        version: 1.2.2
 
 packages:
 
@@ -640,6 +647,12 @@ packages:
 
   '@iconify-json/heroicons@1.2.0':
     resolution: {integrity: sha512-EmvGN0L9EUJCmQ82rkLGZ4tkz0YGQfZV7ugKT6UvHni/bxNitQrD0gLj6NJj2W9zsSoXyNHyCX236+EJmO4pmA==}
+
+  '@iconify-json/hugeicons@1.2.0':
+    resolution: {integrity: sha512-jlvqjvzAECReUzdJ/m5ziW2fOooK/n0Sy8Fryu56KqeFJMgCDgZKvLHZVpt0D0PkyAkEj+pbqtwG0RFcPX/bnw==}
+
+  '@iconify-json/lucide@1.2.2':
+    resolution: {integrity: sha512-pXZ2GvRYW3G3JCnkM6grBhzok5UM9DaCKzUcyHJnBZb+ECxq77VNWJiXdjxrui0LpkwKtnm7hLkmRMVoAn8qNw==}
 
   '@iconify/collections@1.0.456':
     resolution: {integrity: sha512-mVTAgeptQbYrJx38K3l5our5dya7QlzPonecvBnDcwBekuaokht6OakCJx3hgFaJaqXMoDt8X0ZnMa4cFSJFBA==}
@@ -4120,6 +4133,14 @@ snapshots:
       vue: 3.5.1
 
   '@iconify-json/heroicons@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/hugeicons@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/lucide@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
