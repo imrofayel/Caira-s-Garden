@@ -1,15 +1,15 @@
 <template>
-  <div class="flex items-center">
+  <div class="flex items-center justify-start relative -top-10 ml-8">
 
-    <img src="/assets/flowers/03.svg" width="90">
+    <div class="flex text-5xl text-teal-700">
 
-    <img src="/assets/flowers/04.svg" width="90">
+      <span class="playfair-italic">Caira's Flowers</span>
 
-    <div class="text-5xl"><span class="playfair-italic">Caira's Flowers</span><span class="playfair-italic">Love in Every Petal</span></div>
+      <img src="/assets/flowers/03.svg" width="90" class="relative right-4 -top-4 -z-10">
+      
+      <span class="playfair-italic relative top-14 right-12">Crafting Serenity</span>
 
-    <img src="/assets/flowers/01.svg" width="90">
-
-    <img src="/assets/flowers/02.svg" width="90">
+    </div>
 
   </div>
 </template>

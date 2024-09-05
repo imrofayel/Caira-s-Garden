@@ -1,20 +1,21 @@
 <template>
-  <div class="flex justify-between items-center p-8 text-lg">
+  <div class="flex justify-end items-center p-8 text-teal-800 text-lg">
 
-    <div class="playfair-italic text-4xl">Caira</div>
+    <div class="flex justify-normal items-center space-x-8 opacity-85">
 
-    <div class="flex justify-normal items-center space-x-8 opacity-85"><div v-for="(link, index) in links" :key="index">
-      <NuxtLink :to="link.link"><Icon :name="link.icon" size="24"</Icon></NuxtLink>
-    </div></div>
+      <NuxtLink to="/" class="flex">
+        <Icon name="hugeicons:shopping-basket-01" size="30"></Icon>
+        <div class="w-6 h-6 text-white text-base items-center justify-center flex bg-teal-800 relative right-3 -top-1 rounded-full">{{ cart }}</div>
+      </NuxtLink>
+
+    </div>
 
   </div>
 </template>
 
 <script lang="ts" setup>
 
-const links = [
-  {icon: 'hugeicons:search-01', link: '/'}, {icon: 'hugeicons:shopping-basket-01', link: '/'},
-]
+const cart = ref(6)
 
 </script>
 
