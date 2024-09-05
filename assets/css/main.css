@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 .inter {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
   }
 
-@font-face {
-    font-family: 'Apparel';
-    src: url('/assets/fonts/appareldisplay-regular.otf') format('opentype');
-}
-
-.apparel{
-    font-family: 'Apparel';
-}
+  .playfair-italic {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-style: italic;
+  }
 
 *{
     font-family: 'Inter';
