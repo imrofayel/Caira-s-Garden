@@ -24,6 +24,9 @@ importers:
         specifier: latest
         version: 3.5.1
     devDependencies:
+      '@iconify-json/bxs':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/lucide':
         specifier: ^1.2.2
         version: 1.2.2
@@ -650,6 +653,9 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       vue: ^3.2.0
+
+  '@iconify-json/bxs@1.2.0':
+    resolution: {integrity: sha512-qwG0C/iyvpUWqJAE1v25HagHlgASxBgMJO6c/bNgTftTBgntdnHwgEODUwtOWqqnjGCfuIbAhsRvy+STkyFCtQ==}
 
   '@iconify-json/heroicons@1.2.0':
     resolution: {integrity: sha512-EmvGN0L9EUJCmQ82rkLGZ4tkz0YGQfZV7ugKT6UvHni/bxNitQrD0gLj6NJj2W9zsSoXyNHyCX236+EJmO4pmA==}
@@ -4568,6 +4574,10 @@ snapshots:
     dependencies:
       '@tanstack/vue-virtual': 3.10.7(vue@3.5.1)
       vue: 3.5.1
+
+  '@iconify-json/bxs@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/heroicons@1.2.0':
     dependencies:

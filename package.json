@@ -17,6 +17,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@iconify-json/bxs": "^1.2.0",
     "@iconify-json/lucide": "^1.2.2",
     "@iconify-json/ph": "^1.2.0"
   }
