@@ -1,23 +1,27 @@
 <template>
 
-  <div v-for="(review, index) in reviews" :key="index" class="flex px-10">
+  <div class="flex px-10 space-x-4 justify-end"><div v-for="(review, index) in reviews" :key="index">
 
-    <div class="text-xl flex flex-col w-[260px] bg-[#c4f4fa40] rounded-xl backdrop-blur-xl border border border-teal-950/10 space-y-4">
+    <div class="text-xl flex flex-col w-[260px] bg-white/50 rounded-xl backdrop-blur-xl border border border-teal-950/10 space-y-4 overflow-hidden hover:scale-105 duration-500 ease-in-out">
 
-      <div class="leading-relaxed text-xl bg-white/60 p-6 opacity-80">{{ review.review.toLocaleLowerCase() }}</div>
+      <div class="p-6 flex justify-end">
 
-      <img src="/assets/flowers/01.svg" width="60" class="absolute top-[120px] left-[180px]">
+        <div class="absolute top-2 right-3 opacity-10"><Icon name="lucide:arrow-up-right" size="24"></Icon></div>
 
-      <div class="flex flex-col p-6 py-2 pb-6 opacity-90">
+        <div class="leading-relaxed text-[23px] opacity-80 inter-tight">{{ review.review }}</div></div>
 
-        <div class="playfair-italic text-2xl">{{ review.name }}</div>
+      <img :src="`/flowers/${review.id}.svg`" :width="review.width ?? 60" class="z-10 absolute top-[145px] left-[180px]">
+
+      <div class="flex flex-col space-y-1 p-6 py-2 pb-6 opacity-90 bg-[#f1fcfe]">
+
+        <div class="playfair-italic text-[28px]">{{ review.name }}</div>
 
         <div class="text-lg">{{ review.profession }}</div>
       </div>
 
     </div>
     
-  </div>
+  </div></div>
 
 </template>
 
@@ -25,35 +29,25 @@
 
 const reviews = [
   {
-    name: "Samantha Green",
+    id: '01',
+    name: "Adam Rofayel",
     profession: "Interior Designer",
-    review: "The arrangements are always stunning, and the flowers stay fresh for days!",
-    rating: 5
+    review: "Incredibly creative arrangements that add much beauty to my photoshoots!",
   },
-  // {
-  //   name: "Michael Thompson",
-  //   profession: "Software Engineer",
-  //   review: "Ordered a bouquet for my wife’s birthday, and it was absolutely perfect!",
-  //   rating: 4.5
-  // },
-  // {
-  //   name: "Emily Harris",
-  //   profession: "Wedding Planner",
-  //   review: "Their flowers are my top choice for weddings—elegant and perfectly arranged.",
-  //   rating: 5
-  // },
-  // {
-  //   name: "James Lee",
-  //   profession: "Photographer",
-  //   review: "Incredibly creative arrangements that add so much beauty to my photoshoots!",
-  //   rating: 4.7
-  // },
-  // {
-  //   name: "Sophia Patel",
-  //   profession: "Marketing Specialist",
-  //   review: "The shop never fails to impress with their quality and reliable delivery service.",
-  //   rating: 5
-  // }
+  {
+    id: '03',
+    name: "Emily Harris",
+    profession: "Software Engineer",
+    review: "Ordered a bouquet for my wife’s birthday, and it was absolutely perfect!",
+    width: 70
+  },
+  {
+    id: '04',
+    name: "Hinta Hyuga",
+    profession: "Wedding Planner",
+    review: "Their flowers are my top choice for weddings—elegant and perfect.",
+    width: 73
+  },
 ];
 
 
