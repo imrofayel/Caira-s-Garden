@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4 h-full">
+  <div class="h-full w-full">
     <AppHero />
     
     <div class="flex px-10 space-x-4">
@@ -34,9 +34,9 @@
 
     </div>
 
-    <div class="flex p-10"><div class="rounded-full bg-teal-200/20 backdrop-blur-xl w-[200px] h-[200px] flex items-center justify-center overflow-hidden">
-      <img src="/assets/caira.png" class="object-cover w-full h-full">
-    </div></div>
+    <WidgetsHeading/>
+
+    <WidgetsReviews/>
 
   </div>
 </template>
