@@ -1,5 +1,13 @@
 <template>
-  <div class="flex justify-end items-center p-8 text-teal-800 text-lg">
+  <div class="flex justify-end items-center p-8 text-teal-800 text-lg space-x-6">
+
+    <div class="flex justify-normal items-center space-x-8 opacity-85">
+
+      <NuxtLink to="/" class="flex">
+        <Icon name="hugeicons:favourite" size="30"></Icon>
+      </NuxtLink>
+
+    </div>
 
     <div class="flex justify-normal items-center space-x-8 opacity-85">
 
