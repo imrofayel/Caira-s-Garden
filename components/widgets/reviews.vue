@@ -4,7 +4,7 @@
 
     <div class="text-xl flex flex-col w-[260px] bg-[#c4f4fa40] rounded-xl backdrop-blur-xl border border border-teal-950/10 space-y-4">
 
-      <div class="leading-relaxed bg-white/60 p-6 opacity-90">{{ review.review }}</div>
+      <div class="leading-relaxed text-xl bg-white/60 p-6 opacity-80">{{ review.review.toLocaleLowerCase() }}</div>
 
       <img src="/assets/flowers/01.svg" width="60" class="absolute top-[120px] left-[180px]">
 
