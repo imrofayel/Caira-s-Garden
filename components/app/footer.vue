@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col text-xl p-10 pt-12 space-y-5">
-        <div class="flex justify-between items-center"><div class="playfair-italic text-[30px] opacity-90">Caira Kalinggalan</div>
+        <div class="flex justify-between items-center"><div class="playfair-italic text-[32px] opacity-90">Caira Kalinggalan</div>
         
         <a href="mailto:adamrofayel@gmail.com"><Icon name="hugeicons:mail-open-02" size="28px" class="text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon></a>
         </div>
