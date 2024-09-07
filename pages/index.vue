@@ -19,7 +19,7 @@
           </div>
           <div class="p-3 pb-1 w-full h-[165px] bg-[#c4f4fa30] rounded-b-xl flex-col z-10 space-y-2">
             <div class="text-3xl font-medium opacity-90">
-              <span class="opacity-20">$</span>{{ flower.price }}
+              <span class="opacity-20 inter-tight">$</span>{{ flower.price }}
             </div>
             <div class="text-[26px] playfair-italic pb-2 opacity-90">{{ flower.name }}</div>
             <div class="rounded-xl w-full h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:opacity-100 space-x-2 opacity-90">
@@ -40,17 +40,11 @@
     <WidgetsAccordion/>
 
     <UModal v-model="isModalOpen" :ui="{
-        wrapper: 'relative z-50',
-        inner: 'fixed inset-0 overflow-y-auto',
-        container: 'flex min-h-full items-end sm:items-center justify-center text-center',
-        padding: 'p-4 sm:p-0',
-        margin: 'sm:my-8',
-        base: 'relative text-left rtl:text-right flex flex-col',
         overlay: {
           base: 'fixed inset-0 transition-opacity',
-          background: 'bg-gray-200/75 dark:bg-gray-800/75',
+          background: 'bg-gray-200/75 backdrop-blur-lg dark:bg-gray-800/75',
           transition: {
-            enter: 'ease-out duration-300',
+            enter: 'ease-out duration-500',
             enterFrom: 'opacity-0',
             enterTo: 'opacity-100',
             leave: 'ease-in duration-200',
@@ -66,7 +60,7 @@
         height: '',
         fullscreen: 'w-screen h-screen',
         transition: {
-          enter: 'ease-out duration-300',
+          enter: 'ease-out duration-500',
           enterFrom: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
           enterTo: 'opacity-100 translate-y-0 sm:scale-100',
           leave: 'ease-in duration-200',
@@ -77,11 +71,34 @@
 
       <div class="p-6 px-8 text-teal-950 opacity-90">
 
-        <div class="flex justify-between"><h2 class="text-3xl playfair-italic mb-4">{{ selectedFlower?.name }}</h2><img :src="`/images/${selectedFlower?.id}.png`" width="120" class="absolute right-4 -top-12"></div>
+        <div class="flex justify-between"><h2 class="text-[33px] playfair-italic mb-2 opacity-90">{{ selectedFlower?.name }}</h2><div class="absolute right-4 -top-12 h-[140px]"><img :src="`/images/${selectedFlower?.id}.png`" class=" scale-110 w-full h-full object-contain"></div></div>
 
-        <div class="flex space-x-2"><div v-for="season in selectedFlower?.season">
-          <div class="opacity-90 p-2 py-1 rounded-xl text-white/95 bg-[#f1fcfe] inline-block">{{ season }}</div></div>
+        <div class="leading-relaxed text-lg opacity-90">{{ selectedFlower?.description }}</div>
+
+        <div class="text-lg opacity-90 pt-3">
+          <span class="leading-relaxed"><span class="opacity-20 text-xl">1. &ThinSpace;</span>Available specifically during the <u class="decoration-current">{{ selectedFlower?.season.join(', ').toLocaleLowerCase() }}</u> season.</span>
         </div>
+
+        <div class="text-lg opacity-90 pt-3">
+          <span class="leading-relaxed"><span class="opacity-20 text-xl">2. &ThinSpace;</span>Perfect for celebrating any special moment in life e.g., <u class="decoration-current">{{ selectedFlower?.occasion.join(', ').toLocaleLowerCase() }}</u> etc.</span>
+        </div>
+
+        <div class="text-lg opacity-90 pt-3">
+          <span class="leading-relaxed"><span class="opacity-20 text-xl">3. &ThinSpace;</span>This bouquet is <u>{{ selectedFlower?.availability.toLocaleLowerCase() }}</u>.</span>
+        </div>
+
+        <div class="text-lg opacity-90 pt-5">
+          <span class="leading-relaxed">This will be delivered by a local florist with a 7-day fresh guarantee, more details on checkout page.</span>
+        </div>
+
+        <div class="flex items-center justify-between pt-5"><div class="text-3xl font-medium opacity-90">
+          <span class="opacity-20 inter-tight">$</span>{{ selectedFlower?.price }}
+        </div>
+
+        <div class="inline-block rounded-xl p-3 py-5 h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:scale-105 duration-300 ease-in-out space-x-2">
+              <Icon name="hugeicons:shopping-basket-add-01" size="22" />
+              <span>Add to bucket</span>
+        </div></div>
 
       </div>
 
