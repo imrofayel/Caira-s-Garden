@@ -9,8 +9,14 @@ export const useFlowerBucketStore = defineStore('flowerBucket', {
   }),
   actions: {
     addFlower(flower: Flower) {
-      this.flowers.push(flower)
+      if (!this.isFlowerInBucket(flower.id)) {
+        this.flowers.push(flower)
+
+        return true // Indicate that the flower was added
+      }
+      return false // Indicate that the flower was not added (already exists)
     },
+
     removeFlower(flowerId: number) {
       const index = this.flowers.findIndex(f => f.id === flowerId)
       if (index !== -1) {
@@ -23,6 +29,7 @@ export const useFlowerBucketStore = defineStore('flowerBucket', {
   },
   getters: {
     bucketCount: (state) => state.flowers.length,
-    totalPrice: (state) => state.flowers.reduce((sum, flower) => sum + flower.price, 0)
+    totalPrice: (state) => state.flowers.reduce((sum, flower) => sum + flower.price, 0),
+    isFlowerInBucket: (state) => (flowerId: number) => state.flowers.some(f => f.id === flowerId)
   }
 })
