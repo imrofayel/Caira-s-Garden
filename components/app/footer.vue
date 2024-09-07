@@ -13,7 +13,9 @@
 
         <div class="text-lg opacity-90">Mon — Fri: 9 AM — 7 PM.</div></a>
 
-        <div class="text-lg opacity-90">Design & Developed by <a href="https://zaruq.vercel.app/"><u class="underline-offset-8 decoration-teal-900">Naveed Azhar.</u></a></div>
+        <div class="text-lg opacity-90">Design & Developed by <a href="https://zaruq.vercel.app/"><u class="underline-offset-4 decoration-teal-900">Naveed Azhar</u>.</a></div>
+
+        <img src="/assets/flowers/01.svg" width="110" class="absolute right-12">
 
     </div>
 </template>

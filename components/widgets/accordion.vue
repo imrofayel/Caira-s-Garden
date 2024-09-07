@@ -20,7 +20,7 @@ const items = [
 <template>
     <UAccordion :items="items" :ui="{ wrapper: 'flex flex-col w-full bg-transparent hover:bg-transparent',
       item: {
-        size: 'text-[19px]',
+        size: 'text-[21px]',
         color: 'text-teal-950 opacity-90',
         padding: 'pt-3 pb-4 pl-4 leading-loose',
         icon: 'ms-auto transform transition-transform duration-200',
@@ -28,7 +28,7 @@ const items = [
     }" class="p-[150px] py-[50px] space-y-3">
       <template #default="{ item, open }">
         <UButton color="gray" variant="ghost" class="bg-transparent hover:bg-transparent flex justify-between" :ui="{ rounded: 'rounded-none', padding: { sm: 'p-3' } }">
-          <span class="font-normal text-[26px] playfair-italic text-teal-950 opacity-90">{{ item.label }}</span>
+          <span class="font-normal text-[27px] playfair-italic text-teal-950 opacity-90">{{ item.label }}</span>
           <template #trailing>
             <Icon 
               name="hugeicons:arrow-down-01" 

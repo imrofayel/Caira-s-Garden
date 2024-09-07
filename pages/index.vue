@@ -37,7 +37,8 @@
 
     <WidgetsHeading/>
     <WidgetsReviews/>
-    <WidgetsAccordion/>
+    
+    <WidgetsAccordion class="opacity-95"/>
 
     <UModal v-model="isModalOpen" :ui="{
         overlay: {
@@ -95,7 +96,7 @@
           <span class="opacity-20 inter-tight">$</span>{{ selectedFlower?.price }}
         </div>
 
-        <div class="inline-block rounded-xl p-3 py-5 h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:scale-105 duration-300 ease-in-out space-x-2">
+        <div class="inline-block rounded-xl p-3 py-5 h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:scale-105 duration-300 ease-in-out space-x-2" :onclick="addSelectedFlower">
               <Icon name="hugeicons:shopping-basket-add-01" size="22" />
               <span>Add to bucket</span>
         </div></div>
@@ -108,22 +109,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { data as flowers } from '~/data/data';
-
-// Updated Flower interface to match the actual data structure
-interface Flower {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  colors: string[];
-  size: string;
-  availability: string;
-  category: string;
-  occasion: string[];
-  season: string[];
-}
+import { ref, computed, onMounted } from 'vue';
+import { useFlowerBucketStore } from '~/stores/flowerBucketStore';
+import type { Flower } from '~/types/flower';
 
 const isModalOpen = ref(false);
 const selectedFlower = ref<Flower | null>(null);
@@ -132,5 +121,42 @@ const openModal = (flower: Flower) => {
   selectedFlower.value = flower;
   isModalOpen.value = true;
 };
+
+const isStoreReady = ref(false);
+let flowerBucketStore: ReturnType<typeof useFlowerBucketStore>;
+
+onMounted(() => {
+  flowerBucketStore = useFlowerBucketStore();
+  isStoreReady.value = true;
+});
+
+// const bucketCount = computed(() => isStoreReady.value ? flowerBucketStore.bucketCount : 0);
+// const totalPrice = computed(() => isStoreReady.value ? flowerBucketStore.totalPrice : 0);
+// const bucketFlowers = computed(() => isStoreReady.value ? flowerBucketStore.flowers : []);
+
+const removeFlower = (flowerId: number) => {
+  if (isStoreReady.value) {
+    flowerBucketStore.removeFlower(flowerId);
+  }
+};
+
+// const addFlower = (flower: Flower) => {
+//   if (isStoreReady.value) {
+//     flowerBucketStore.addFlower(flower);
+//   }
+// };
+
+const addSelectedFlower = () => {
+  if (isStoreReady.value && selectedFlower.value) {
+    flowerBucketStore.addFlower(selectedFlower.value);
+  }
+};
+
+// const clearBucket = () => {
+//   if (isStoreReady.value) {
+//     flowerBucketStore.clearBucket();
+//   }
+// };
+
 
 </script>
