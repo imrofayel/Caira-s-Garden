@@ -38,6 +38,8 @@
 
     <WidgetsReviews/>
 
+    <WidgetsAccordion/>
+
   </div>
 </template>
 
