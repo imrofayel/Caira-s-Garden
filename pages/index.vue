@@ -23,8 +23,15 @@
             </div>
             <div class="text-[26px] playfair-italic pb-2 opacity-90">{{ flower.name }}</div>
             <div class="rounded-xl w-full h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:opacity-100 space-x-2 opacity-90" :onclick="addSelectedFlower">
-              <Icon name="hugeicons:shopping-basket-add-01" size="22" />
-              <span>Add to bucket</span>
+
+              <Icon name="hugeicons:shopping-basket-remove-01" size="22" v-if="flowerBucketStore.isFlowerInBucket(flower.id)"/>
+
+              <Icon name="hugeicons:shopping-basket-add-01" size="22" v-if="!flowerBucketStore.isFlowerInBucket(flower.id)"/>
+              
+              <span v-if="flowerBucketStore.isFlowerInBucket(flower.id)">Remove item</span>
+
+              <span v-if="!flowerBucketStore.isFlowerInBucket(flower.id)">Add to bucket</span>
+
             </div>
           </div>
         </div>
@@ -97,11 +104,20 @@
         </div>
 
         <div class="inline-block rounded-xl p-3 py-5 h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:scale-105 duration-300 ease-in-out space-x-2" :onclick="addSelectedFlower">
-              <Icon name="hugeicons:shopping-basket-add-01" size="22" />
-              <span>Add to bucket</span>
-        </div></div>
+            <Icon name="hugeicons:shopping-basket-remove-01" size="22" v-if="flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
+
+            <Icon name="hugeicons:shopping-basket-add-01" size="22" v-if="!flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
+
+            <span v-if="flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)">Remove item</span>
+
+            <span v-if="!flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)">Add to bucket</span>
+        </div>
+      
+      </div>
 
       </div>
+
+      
 
     </UModal>
 
