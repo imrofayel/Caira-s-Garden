@@ -2,8 +2,8 @@
 
 const items = [
   {
-    label: 'What is Caira?',
-    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    label: 'What types of flowers do you offer?',
+    content: 'We offer a wide variety of fresh flowers, including roses, lilies, tulips, orchids, sunflowers, and seasonal blooms. Whether you’re looking for a classic bouquet or something more unique, we have a range of options to suit every occasion.'
   },
   {
     label: 'Features & Quick Tips',
