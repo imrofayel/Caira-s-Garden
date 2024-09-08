@@ -32,6 +32,13 @@
 
       <WidgetsPayment/>
 
+      <div>
+This item will be delivered by a local florist. We provide a 7-day fresh flower guarantee. See <u>Delivery Details</u>
+
+To guarantee the freshest bouquet possible, our florists may replace some stems in your arrangement which could differ in color and variety. See <u>Substitution Policy.</u>
+
+</div>
+      
     </div>
 
   </div>

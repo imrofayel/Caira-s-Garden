@@ -4,6 +4,7 @@
     <div class="h-full relative w-full text-teal-950 bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#d7f6fc,transparent)]">
     <AppCheckoutHeader/>
     <slot />
+    <AppCheckoutFooter/>
   </div></div>
 </template>
 
