@@ -17,6 +17,10 @@ export const useFlowerBucketStore = defineStore('flowerBucket', {
       return false // Indicate that the flower was not added (already exists)
     },
 
+    addAgain(flower: Flower){
+      this.flowers.push(flower)
+    },
+
     removeFlower(flowerId: number) {
       const index = this.flowers.findIndex(f => f.id === flowerId)
       if (index !== -1) {

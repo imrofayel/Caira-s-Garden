@@ -13,9 +13,9 @@
           class="h-[335px] w-[200px] flex-col items-center justify-center rounded-xl bg-white/70 backdrop-blur-lg border border-teal-950/10 hover:scale-105 duration-500 ease-in-out cursor-pointer"
         >
           <div class="w-full h-[170px] relative justify-start flex flex-col items-center">
-            <div class="flex w-full justify-end relative top-2 right-4 text-teal-800 opacity-90 absolute">
+            <div class="flex w-full justify-end relative top-3 right-4 text-teal-800 opacity-95 absolute">
               <Icon
-                name=""
+                name="hugeicons:delete-01"
                 size="24"
               />
             </div>
