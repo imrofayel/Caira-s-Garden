@@ -5,7 +5,7 @@
         <a href="mailto:adamrofayel@gmail.com"><Icon name="hugeicons:mail-open-02" size="28px" class="text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon></a>
         </div>
 
-        <a href="https://maps.app.goo.gl/X1zkhLJVJJGPYC64A" class="flex space-x-2"><Icon name="hugeicons:location-06" class="size-[24px] text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon>
+        <a href="https://maps.app.goo.gl/X1zkhLJVJJGPYC64A" class="flex space-x-2"><Icon name="hugeicons:location-07" class="size-[24px] text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon>
 
         <div class="text-lg opacity-90">Jasmine Street, Barangay San Vicente, Zamboanga City, Philippines.</div></a>
 

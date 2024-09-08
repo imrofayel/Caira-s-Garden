@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col text-xl p-6 sm:p-10 sm:pt-12 space-y-5">
 
-      <a href="https://maps.app.goo.gl/X1zkhLJVJJGPYC64A" class="flex space-x-2"><Icon name="hugeicons:location-06" class="size-[24px] text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon>
+      <a href="https://maps.app.goo.gl/X1zkhLJVJJGPYC64A" class="flex space-x-2"><Icon name="hugeicons:location-07" class="size-[24px] text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon>
 
       <div class="text-lg opacity-90">Jasmine Street, Barangay San Vicente, Zamboanga City, Philippines.</div></a>
 
