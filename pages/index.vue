@@ -4,7 +4,7 @@
     
     <div class="flex px-10 space-x-4">
       <div v-for="flower in flowers" :key="flower.id">
-        <div 
+        <div
           class="h-[335px] w-[200px] flex-col items-center justify-center rounded-xl bg-white/70 backdrop-blur-lg border border-teal-950/10 hover:scale-105 duration-500 ease-in-out cursor-pointer"
           @click="openModal(flower)"
         >
@@ -24,9 +24,9 @@
             <div class="text-[26px] playfair-italic pb-2 opacity-90">{{ flower.name }}</div>
             <div class="rounded-xl w-full h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:opacity-100 space-x-2 opacity-90" :onclick="addSelectedFlower">
 
-              <Icon name="hugeicons:shopping-basket-remove-01" size="22" v-if="flowerBucketStore.isFlowerInBucket(flower.id)"/>
+              <Icon name="hugeicons:shopping-basket-remove-01" size="23" v-if="flowerBucketStore.isFlowerInBucket(flower.id)"/>
 
-              <Icon name="hugeicons:shopping-basket-add-01" size="22" v-if="!flowerBucketStore.isFlowerInBucket(flower.id)"/>
+              <Icon name="hugeicons:shopping-basket-add-01" size="23" v-if="!flowerBucketStore.isFlowerInBucket(flower.id)"/>
               
               <span v-if="flowerBucketStore.isFlowerInBucket(flower.id)">Remove item</span>
 
@@ -45,10 +45,10 @@
     <WidgetsHeading/>
     <WidgetsReviews/>
 
-    <div class="text-center text-[100px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
+    <div class="pt-6 text-center text-[100px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
     </div>
     
-    <WidgetsAccordion class=""/>
+    <WidgetsAccordion/>
 
     <UModal v-model="isModalOpen" :ui="{
         overlay: {
@@ -107,9 +107,10 @@
         </div>
 
         <div class="inline-block rounded-xl p-3 py-5 h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:scale-105 duration-300 ease-in-out space-x-2" :onclick="addSelectedFlower">
-            <Icon name="hugeicons:shopping-basket-remove-01" size="22" v-if="flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
 
-            <Icon name="hugeicons:shopping-basket-add-01" size="22" v-if="!flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
+            <Icon name="hugeicons:shopping-basket-remove-01" size="23" v-if="flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
+
+            <Icon name="hugeicons:shopping-basket-add-01" size="23" v-if="!flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)"/>
 
             <span v-if="flowerBucketStore.isFlowerInBucket(selectedFlower?.id ?? Infinity)">Remove item</span>
 
@@ -121,6 +122,7 @@
       </div>
 
     </UModal>
+
 
   </div>
 </template>
@@ -145,16 +147,15 @@ const openModal = (flower: Flower) => {
 
 const addSelectedFlower = () => {
   if (selectedFlower.value) {
-    flowerBucketStore.addFlower(selectedFlower.value);
+
+    if(flowerBucketStore.isFlowerInBucket(selectedFlower.value.id)){
+      flowerBucketStore.removeFlower(selectedFlower.value.id)
+    }
+    else {
+      flowerBucketStore.addFlower(selectedFlower.value);
+    }
   }
-};
 
-const removeFlower = (flowerId: number) => {
-  flowerBucketStore.removeFlower(flowerId);
-};
-
-const clearBucket = () => {
-  flowerBucketStore.clearBucket();
 };
 
 </script>

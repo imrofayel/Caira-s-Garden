@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col text-xl p-10 pt-12 space-y-5">
-        <div class="flex justify-between items-center"><div class="playfair-italic text-[32px]">Caira Kalinggalan</div>
+        <div class="pb-2 flex justify-between items-center"><div class="playfair-italic text-[70px] opacity-10 relative top-4">Caira Kalinggalan</div>
         
         <a href="mailto:adamrofayel@gmail.com"><Icon name="hugeicons:mail-open-02" size="28px" class="text-teal-900 hover:scale-105 duration-300 ease-in-out"></Icon></a>
         </div>
@@ -13,7 +13,7 @@
 
         <div class="text-lg opacity-90">Mon — Fri: 9 AM — 7 PM.</div></a>
 
-        <div class="text-lg opacity-90">Design & Developed by <a href="https://zaruq.vercel.app/"><u class="underline-offset-4 decoration-teal-950/90">Naveed Azhar</u>.</a></div>
+        <div class="text-lg opacity-90">Design & Developed by <a href="https://zaruq.vercel.app/"><u class="underline-offset-4 decoration-teal-950/10">Naveed Azhar</u>.</a></div>
 
         <img src="/assets/flowers/01.svg" width="110" class="absolute right-12">
 
