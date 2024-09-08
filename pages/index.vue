@@ -44,8 +44,11 @@
 
     <WidgetsHeading/>
     <WidgetsReviews/>
+
+    <div class="text-center text-[100px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
+    </div>
     
-    <WidgetsAccordion class="opacity-95"/>
+    <WidgetsAccordion class=""/>
 
     <UModal v-model="isModalOpen" :ui="{
         overlay: {
