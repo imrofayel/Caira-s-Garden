@@ -2,7 +2,7 @@
   <div class="h-full w-full">
     <AppHero class="sm:pb-0 pb-6"/>
     
-    <div class="flex sm:flex-row flex-col justify-center items-center space-y-5 sm:space-y-0 px-10 sm:space-x-4">
+    <div class="flex sm:flex-row flex-col justify-center sm:justify-start items-center space-y-5 sm:space-y-0 px-10 sm:space-x-4">
       <div v-for="flower in flowers" :key="flower.id">
         <div
           class="h-[335px] w-[200px] flex-col items-center justify-center rounded-xl bg-white/70 backdrop-blur-lg border border-teal-950/10 hover:scale-105 duration-500 ease-in-out cursor-pointer"

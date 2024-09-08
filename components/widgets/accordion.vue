@@ -10,7 +10,7 @@ const items = [
     content: 'Absolutely! You can customize your bouquet by selecting your preferred flowers, colors, and arrangement style. If you have specific requests, feel free to contact us, and we’ll create a beautiful bouquet tailored to your preference.'
   },
   {
-    label: 'Do you offer same-day delivery?',
+    label: 'Do you offer same day delivery?',
     content: 'Yes, we offer same-day delivery for orders placed before 2:00 PM. Our delivery services are available throughout the local area, ensuring that your flowers arrive fresh and on time for any special occasion.'
   },
 ];
@@ -25,7 +25,7 @@ const items = [
         padding: 'pt-3 pb-4 pl-4 leading-loose',
         icon: 'ms-auto transform transition-transform duration-200',
       },
-    }" class="p-[26px] sm:p-[150px] pt-[10px] pb-[40px] space-y-2">
+    }" class="px-[26px] sm:px-[150px] pt-[10px] pb-[40px] space-y-2">
       <template #default="{ item, open }">
         <UButton color="gray" variant="ghost" class="bg-transparent hover:bg-transparent flex justify-between" :ui="{ rounded: 'rounded-none', padding: { sm: 'p-4' } }">
           <span class="font-normal text-[25px] sm:text-[34px] playfair-italic text-left text-teal-950 opacity-90 hover:opacity-90 duration-300 ease-in-out leading-normal" :class="{ 'opacity-90': open }">{{ item.label }}</span>
