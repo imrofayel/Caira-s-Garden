@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-end items-center p-8 text-teal-800 text-lg space-x-6">
+  <div class="flex justify-end items-center p-4 sm:p-8 text-teal-800 text-lg space-x-6">
 
     <div class="flex justify-normal items-center space-x-8 opacity-85">
 

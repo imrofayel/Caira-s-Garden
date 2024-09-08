@@ -1,8 +1,8 @@
 <template>
   <div class="h-full w-full">
-    <AppHero />
+    <AppHero class="sm:pb-0 pb-6"/>
     
-    <div class="flex px-10 space-x-4">
+    <div class="flex sm:flex-row flex-col justify-center items-center space-y-5 sm:space-y-0 px-10 sm:space-x-4">
       <div v-for="flower in flowers" :key="flower.id">
         <div
           class="h-[335px] w-[200px] flex-col items-center justify-center rounded-xl bg-white/70 backdrop-blur-lg border border-teal-950/10 hover:scale-105 duration-500 ease-in-out cursor-pointer"
@@ -45,7 +45,7 @@
     <WidgetsHeading/>
     <WidgetsReviews/>
 
-    <div class="pt-6 text-center text-[80px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
+    <div class="pt-6 text-center text-[50px] sm:text-[80px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
     </div>
     
     <WidgetsAccordion class="opacity-90"/>
@@ -102,7 +102,7 @@
           <span class="leading-relaxed">This will be delivered by a local florist with a 7-day fresh guarantee, more details on checkout page.</span>
         </div>
 
-        <div class="flex items-center justify-between pt-5"><div class="text-3xl font-medium opacity-90">
+        <div class="flex sm:flex-row flex-col sm:items-center justify-between pt-5 sm:space-y-0 space-y-3"><div class="text-3xl font-medium opacity-90">
           <span class="opacity-20 inter-tight">$</span>{{ selectedFlower?.price }}
         </div>
 

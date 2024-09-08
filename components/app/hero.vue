@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-start relative -top-10 ml-8">
+  <div class="flex items-center justify-start sm:relative -top-10 sm:ml-8 px-2 sm:px-0">
 
     <div class="flex text-4xl sm:text-6xl text-teal-700">
 

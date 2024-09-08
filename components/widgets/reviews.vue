@@ -1,6 +1,6 @@
 <template>
 
-  <div class="flex px-10 space-x-4 justify-end"><div v-for="(review, index) in reviews" :key="index">
+  <div class="flex sm:flex-row flex-col space-y-5 sm:space-y-0 px-10 sm:space-x-4 justify-end"><div v-for="(review, index) in reviews" :key="index">
 
     <div class="text-xl flex flex-col w-[260px] bg-white/50 rounded-xl backdrop-blur-xl border border border-teal-950/10 space-y-4 overflow-hidden hover:scale-105 duration-500 ease-in-out">
 

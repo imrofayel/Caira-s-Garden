@@ -1,7 +1,7 @@
 <template>
 
-  <div class="text-lg h-9 w-full bg-teal-700 flex items-center justify-center text-white">
-    <Icon name="lucide:party-popper" size="24"></Icon><span class="p-2">Get upto 40% off on first order.</span>
+  <div class="sm:text-lg h-9 w-full bg-teal-700 flex items-center justify-center text-white">
+    <Icon name="lucide:party-popper" class="size-[20px] sm:size-[24px]"></Icon><span class="p-2">Get upto 40% off on first order.</span>
   </div>
 
   <div class="inset-0 -z-10 h-full w-full bg-[#fcfcfc] bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">

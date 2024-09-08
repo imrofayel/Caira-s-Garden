@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col px-20 text-lg">
+  <div class="flex flex-col px-6 sm:px-20 text-lg">
 
-    <div class="text-6xl playfair-italic opacity-90">Your Bucket</div>
+    <div class="text-4xl sm:text-6xl playfair-italic opacity-90">Your Bucket</div>
 
-    <div class="flex text-xl flex-col py-6 space-y-6" v-if="!bucketCount"><div>Nothing is in your bucket, but you can add beautiful flowers in your bucket on this site.</div>
+    <div class="flex sm:text-xl flex-col py-6 space-y-6 leading-relaxed" v-if="!bucketCount"><div>Nothing is in your bucket, but you can add beautiful flowers in your bucket on this site.</div>
   
-    <div class="p-10 flex text-5xl text-teal-800 items-center justify-center">
-      <div class="text-[100px] playfair-italic opacity-10 text-right hover:opacity-90 duration-300 ease-in-out">In joy or sadness, flowers are our constant friends.
-    </div><img src="/assets/flowers/02.svg" width="150" class="relative"></div>
+    <div class="sm:p-10 flex text-5xl text-teal-800 items-center justify-center">
+      <div class="sm:text-[100px] playfair-italic opacity-10 text-right hover:opacity-90 duration-300 ease-in-out">In joy or sadness, flowers are our constant friends.
+    </div><img src="/assets/flowers/02.svg" class="relative  w-[100px] sm:w-[150px]"></div>
   </div>
 
     <div class="flex flex-col py-6 space-y-6" v-if="bucketCount">

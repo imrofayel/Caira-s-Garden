@@ -25,15 +25,14 @@ const items = [
         padding: 'pt-3 pb-4 pl-4 leading-loose',
         icon: 'ms-auto transform transition-transform duration-200',
       },
-    }" class="p-[150px] pt-[10px] pb-[40px] space-y-3">
+    }" class="p-[26px] sm:p-[150px] pt-[10px] pb-[40px] space-y-2">
       <template #default="{ item, open }">
         <UButton color="gray" variant="ghost" class="bg-transparent hover:bg-transparent flex justify-between" :ui="{ rounded: 'rounded-none', padding: { sm: 'p-4' } }">
-          <span class="font-normal text-[34px] playfair-italic text-teal-950 opacity-90 hover:opacity-90 duration-300 ease-in-out" :class="{ 'opacity-90': open }">{{ item.label }}</span>
+          <span class="font-normal text-[25px] sm:text-[34px] playfair-italic text-left text-teal-950 opacity-90 hover:opacity-90 duration-300 ease-in-out leading-normal" :class="{ 'opacity-90': open }">{{ item.label }}</span>
           <template #trailing>
             <Icon 
               name="hugeicons:arrow-down-01" 
-              size="28" 
-              class="text-teal-950 opacity-90 transform transition-transform duration-[800ms] ease-in-out" 
+              class="text-teal-950 opacity-90 transform transition-transform duration-[800ms] ease-in-out size-[28px]" 
               :class="{ 'rotate-180': open }"
             />
           </template>
