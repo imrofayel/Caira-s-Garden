@@ -1,7 +1,15 @@
 <template>
-  <NuxtLayout>
+
+  <div class="p-10 block md:hidden h-sceen w-sceen text-3xl leading-relaxed text-white/90 bg-black">This site is under maintencne, and only be viewed using Desktop browser or desktop mode on mobile.
+
+
+    <span class="block pt-20">Soon it will be updated so stay tuned.</span>
+  </div>
+
+  <div class="hidden md:block"><NuxtLayout>
+    
     <NuxtPage/>
-  </NuxtLayout>
+  </NuxtLayout></div>
 </template>
 
 <script setup>
