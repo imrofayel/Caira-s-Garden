@@ -22,7 +22,7 @@
               <span class="opacity-20 inter-tight">$</span>{{ flower.price }}
             </div>
             <div class="text-[26px] playfair-italic pb-2 opacity-90">{{ flower.name }}</div>
-            <div class="rounded-xl w-full h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:opacity-100 space-x-2 opacity-90" :onclick="addSelectedFlower">
+            <div class="rounded-xl w-full h-10 text-lg text-white flex justify-center items-center z-10 bg-teal-950 hover:opacity-100 space-x-2 opacity-90">
 
               <Icon name="hugeicons:shopping-basket-remove-01" size="23" v-if="flowerBucketStore.isFlowerInBucket(flower.id)"/>
 

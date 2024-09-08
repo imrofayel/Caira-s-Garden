@@ -46,9 +46,9 @@
                   placeholder="Enter your billing address" required></textarea>
       </div>
 
-      <div class="flex justify-between pt-2"><span>Price:</span><span>${{ totalPrice }}</span></div>
+      <div class="flex justify-between pt-2"><span>Price:</span><span>${{ totalPrice.toFixed(2) }}</span></div>
 
-      <div class="flex justify-between pb-3"><span>Order Discount:</span><span>-${{ totalPrice * 0.40 }}</span></div>
+      <div class="flex justify-between pb-3"><span>Order Discount:</span><span>-${{ (totalPrice * 0.40).toFixed(2) }}</span></div>
 
       <button class="w-full" type="submit"><div class="w-full bg-teal-950 hover:bg-teal-900 text-white py-3 px-4 rounded-2xl hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition duration-500 ease-in-out space-x-2 flex items-center justify-center cursor-pointer">
         
