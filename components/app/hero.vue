@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-start relative -top-10 ml-8">
 
-    <div class="flex text-4xl sm:text-7xl text-teal-700">
+    <div class="flex text-4xl sm:text-6xl text-teal-700">
 
       <span class="playfair-italic">Caira's Flowers</span>
 
