@@ -53,7 +53,7 @@
     <UModal v-model="isModalOpen" :ui="{
         overlay: {
           base: 'fixed inset-0 transition-opacity',
-          background: 'bg-gray-200/75 backdrop-blur-lg dark:bg-gray-800/75',
+          background: 'bg-gray-200/75 backdrop-blur-lg',
           transition: {
             enter: 'ease-out duration-500',
             enterFrom: 'opacity-0',
@@ -63,7 +63,7 @@
             leaveTo: 'opacity-0',
           },
         },
-        background: 'bg-white/80 backdrop-blur-xl dark:bg-gray-900',
+        background: 'bg-white/80 backdrop-blur-xl',
         ring: '',
         rounded: 'rounded-xl',
         shadow: 'shadow-none',
