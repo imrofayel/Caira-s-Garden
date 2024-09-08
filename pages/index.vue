@@ -48,7 +48,7 @@
     <div class="pt-6 text-center text-[100px] playfair-italic opacity-90 duration-300 ease-in-out">FAQ
     </div>
     
-    <WidgetsAccordion/>
+    <WidgetsAccordion class="opacity-90"/>
 
     <UModal v-model="isModalOpen" :ui="{
         overlay: {
